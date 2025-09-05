@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Quiz – Class ▸ Subject ▸ Topic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="quiz-style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Smart Quiz</h1>
+          <div class="pill">Fetch online questions • Class → Subject → Topic</div>
+        </div>
+      </div>
+      <div class="statusbar">
+        <div class="chip" id="selChip"><span class="dot"></span><span id="selText">Class — Subject — Topic</span></div>
+        <div class="chip" title="Timer"><span class="dot" style="background:var(--danger)"></span><span id="timer">00:00</span></div>
+        <div class="chip" title="Score"><span class="dot" style="background:var(--accent-2)"></span><span id="score">Score: 0</span></div>
+      </div>
+    </header>
+
+    <!-- Controls -->
+    <section class="card panel">
+      <div class="row grid-3">
+        <div>
+          <label for="classSel">Class</label>
+          <select id="classSel"></select>
+        </div>
+        <div>
+          <label for="subjectSel">Subject</label>
+          <select id="subjectSel" disabled></select>
+        </div>
+        <div>
+          <label for="topicSel">Topic</label>
+          <select id="topicSel" disabled></select>
+        </div>
+      </div>
+      <div class="controls" style="margin-top:12px">
+        <button class="btn primary" id="loadBtn">Load Questions</button>
+        <button class="btn success" id="startBtn" disabled>Start Quiz</button>
+        <button class="btn ghost" id="homeBtn">Home</button>
+        <div class="pill">Time per question: <input id="secPerQ" type="number" min="5" max="300" value="30" style="width:80px; margin-left:6px"> secs</div>
+      </div>
+    </section>
+
+    <!-- Quiz + Side -->
+    <section class="quiz">
+      <div class="card panel">
+        <div class="progress" aria-label="Progress"><div id="progBar" class="bar"></div></div>
+        <div id="qWrap" class="question hidden"></div>
+        <div class="footer">
+          <div class="left">
+            <button class="btn" id="backBtn" disabled>◀ Back</button>
+            <button class="btn" id="nextBtn" disabled>Next ▶</button>
+          </div>
+          <div class="right">
+            <button class="btn ghost" id="submitBtn" disabled>Submit Quiz</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card panel">
+        <div class="summary">
+          <h3>Live Stats</h3>
+          <div class="stat" id="stAttempts">Attempted: 0</div>
+          <div class="stat" id="stCorrect">Correct: 0</div>
+          <div class="stat" id="stWrong">Wrong: 0</div>
+          <div class="stat" id="stRemaining">Remaining: 0</div>
+          <hr>
+          <h3>Instructions</h3>
+          <ol>
+            <li>Select Class → Subject → Topic.</li>
+            <li>Click <b>Load Questions</b> to fetch from online JSON.</li>
+            <li>Click <b>Start Quiz</b>. Timer starts automatically.</li>
+            <li>Choose an option. Correct turns green, wrong turns red.</li>
+            <li>Use <b>Next</b>/<b>Back</b>, and <b>Submit Quiz</b> anytime.</li>
+          </ol>
+        </div>
+      </aside>
+    </section>
+  </div>
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+
+  <!-- Lightbox for images -->
+<div id="lightbox" class="lightbox hidden">
+  <span id="lightboxClose" class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="Preview">
+</div>
+</body>
+</html>

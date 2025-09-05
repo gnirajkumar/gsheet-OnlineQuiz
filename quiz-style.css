@@ -1,0 +1,145 @@
+/* quiz-style.css modern look */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #31cfe4, #e65183);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.card.panel {
+  background: #f59696;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #050505;
+}
+
+/* Question text */
+.qtext {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+  color: black;
+}
+
+/* Question image */
+.qimg {
+  display: block;
+  margin: 10px auto;
+  max-height: 180px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Options grid */
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.opt {
+  background: #0250df;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opt:hover {
+  background: #4468cc;
+  transform: scale(1.02);
+}
+
+.opt.correct {
+  background: #0bec03 !important;
+  color: #f9faf9;
+}
+
+.opt.wrong {
+  background: #ec031a !important;
+  color: #f5f2f2;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn.primary {
+  background: #2196f3;
+  color: white;
+}
+
+.btn.success {
+  background: #4caf50;
+  color: white;
+}
+
+.btn.ghost {
+  background: #eeeeee;
+  color: #444;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Footer nav */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Progress bar */
+.progress {
+  background: #e0e0e0;
+  border-radius: 20px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.bar {
+  background: linear-gradient(90deg, #2196f3, #21cbf3);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Explanation box */
+.explain {
+  margin-top: 15px;
+  padding: 12px;
+  border-left: 4px solid #2196f3;
+  background: #f0f8ff;
+  border-radius: 8px;
+  color: #050505;
+}
+
+.stat {
+  color: #e0e0e0;
+}
