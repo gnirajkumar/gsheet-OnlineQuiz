@@ -1,8 +1,7 @@
 // script.js — Google Sheets API version
 
 // ⚡ Replace with your own values:
-const SHEET_ID = "https://docs.google.com/spreadsheets/d/
-1wBa1QvWG72haAFHrn1G1ztHliY_lJNJpqssBHdlIsQ8"; // e.g., 1ABCDefGhijkLMNOPqrstuVWxyz12345
+const SHEET_ID = "1wBa1QvWG72haAFHrn1G1ztHliY_lJNJpqssBHdlIsQ8"; // e.g., 1ABCDefGhijkLMNOPqrstuVWxyz12345
 const API_KEY  = "AIzaSyDDHB4HsG6AOB6YtiNYpXCP44nhiR8NdHI";        // from Google Cloud Console
 const RANGE    = "Sheet1!A2:O";         // A = Class, B = Subject, C = Topic ... O = ExplanationImage
 
@@ -173,5 +172,6 @@ loadBtn.addEventListener("click", () => {
 
   await loadFromSheet(); // fetch Google Sheet data
 })();
+
 
 
